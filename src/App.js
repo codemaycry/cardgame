@@ -41,6 +41,7 @@ class App extends Component {
             getHint = { this.getHint }
             />
             <h2 id="gameEnded"></h2>
+            <h2 id="try"></h2>
             <h2 id="answer"></h2>
             <h2 id="hint"></h2>
             <button class="restartButton" onClick= { this.restart }>New game</button>
