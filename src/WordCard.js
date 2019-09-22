@@ -43,6 +43,11 @@ export default class WordCard extends Component {
         }
     }
     render() {
+            if( this.props.isSurrender ){
+                console.log("Surrendered")
+                this.props.getAnswer(this.state.chars.join(''))
+                document.getElementById('gameEnded').innerHTML = `SURRENDED`
+            }
             return ( <div> 
                 {   Array.from(this.props.value).map((c, i) => < CharacterCard value = { c }
                         key = { i }
