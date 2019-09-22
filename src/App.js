@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import WordCard from './WordCard';
-import styles from './App.css';
+import './App.css';
 const word = ['hello','whale','queen','dodge','snipe','prank']
 var randomedWord = word[Math.floor(Math.random()*word.length)]
 class App extends Component {
