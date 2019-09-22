@@ -48,6 +48,10 @@ export default class WordCard extends Component {
                 this.props.getAnswer(this.state.chars.join(''))
                 document.getElementById('gameEnded').innerHTML = `SURRENDED`
             }
+            if( this.props.needHint ){
+                console.log("I need hint!")
+                this.props.getHint(this.state.chars.join('')[0].toString())
+            }
             return ( <div> 
                 {   Array.from(this.props.value).map((c, i) => < CharacterCard value = { c }
                         key = { i }

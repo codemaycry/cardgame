@@ -6,7 +6,10 @@ var randomedWord = word[Math.floor(Math.random()*word.length)]
 class App extends Component {
     constructor(){
       super();
-      this.state = {isSurrender : false} 
+      this.state = {
+          isSurrender : false,
+          needHint : false
+    } 
      }
     restart = () =>
     {
@@ -20,18 +23,28 @@ class App extends Component {
     {
         document.getElementById('answer').innerHTML = `Answer is ${ans}`
     }
-    render() {
-        if (this.state.needHint){
+    hintMe = () =>
+    {
+        this.setState({needHint : true})
+    }
+    getHint = (ans2) => 
+    {
+        document.getElementById('hint').innerHTML = `First character is : ${ans2}`
     }
     
+    render() {
         return ( < div >
             <WordCard value = { randomedWord.toUpperCase()} 
             getAnswer = { this.getAnswer } 
             isSurrender = { this.state.isSurrender }
+            needHint = { this.state.needHint }
+            getHint = { this.getHint }
             />
             <h2 id="gameEnded"></h2>
             <h2 id="answer"></h2>
+            <h2 id="hint"></h2>
             <button class="restartButton" onClick= { this.restart }>New game</button>
+            <button class="hintButton" onClick= { this.hintMe }>Hint</button>
             <button class="surrenderButton" onClick= { this.surrender }>Surrender</button>
             </div>
         );
