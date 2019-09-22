@@ -12,10 +12,11 @@ h2{
     margin-top: 50px;
     margin-bottom: 50px;
     margin-right: 150px;
-    margin-left: 80px;
+    margin-left: 150px;
 }
 button{
-    margin-left: 6em;
+    margin-left: 2em;
+    margin-right: 2em;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -39,4 +40,5 @@ button{
 }
 body{
     background-color: #b6fc74;
+    text-align: center;
 }
