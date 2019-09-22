@@ -33,7 +33,10 @@ class App extends Component {
     }
     
     render() {
-        return ( < div >
+        return ( 
+        < div >
+            <h1 id="head" >Card Game</h1>
+            <h2 id="instruction">Try to guess!</h2>
             <WordCard value = { randomedWord.toUpperCase()} 
             getAnswer = { this.getAnswer } 
             isSurrender = { this.state.isSurrender }
@@ -48,7 +51,7 @@ class App extends Component {
             <button class="restartButton" onClick= { this.restart }>New game</button>
             <button class="hintButton" onClick= { this.hintMe }>Hint</button>
             <button class="surrenderButton" onClick= { this.surrender }>Surrender</button>
-            </div>
+        </div>
         );
     }
 }
