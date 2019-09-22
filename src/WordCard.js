@@ -34,6 +34,9 @@ export default class WordCard extends Component {
                 document.getElementById('answer').innerHTML = `Your answer is : ${guess.join('').toString()}`
                 document.getElementById('try').innerHTML = `Attempt : ${this.state.attempt}`
                 if(this.state.attempt == 3 ){
+                    document.getElementById('moreHint').innerHTML = `Third character is : ${this.state.chars.join('')[2].toString()}`
+                }
+                else if(this.state.attempt == 5 ){
                     document.getElementById('gameEnded').innerHTML = `Game Over`
                     document.getElementById('answer').innerHTML = `Answer is ${this.state.chars.join('').toString()}`
                     setTimeout(() => window.location.reload(false),3500) 

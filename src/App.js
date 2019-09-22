@@ -44,6 +44,7 @@ class App extends Component {
             <h2 id="try"></h2>
             <h2 id="answer"></h2>
             <h2 id="hint"></h2>
+            <h2 id="moreHint"></h2>
             <button class="restartButton" onClick= { this.restart }>New game</button>
             <button class="hintButton" onClick= { this.hintMe }>Hint</button>
             <button class="surrenderButton" onClick= { this.surrender }>Surrender</button>
